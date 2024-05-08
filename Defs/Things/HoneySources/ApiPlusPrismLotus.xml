@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	<!--I am probably not gonna add a lot of honey/plant types, so I am going to just put all the plant/honey/nectar/etc stuff into one file. -->
+	<ThingDef ParentName="ApiniPlants">
+		<!-- Prismlotus -->
+		<defName>ApiPlus_PrismLotus</defName>
+		<label>Prism Lotus</label>
+		<description>An extravagantly beautiful and absolutely aggravating plant to grow. The pollen and leaves of this plant carry a protein found nowhere else in nature, that causes every cell of the plant to refract light as though it's a prism. It is so profoundly delicate, that it can only grow under extremely favorable conditions, such as a hydroponics basin. The honey produced from this plant copies its light refraction capabilities, allowing it to be used in special spacer tech light applications.
+		\nIt is said to be originally created by a hive that was inspired by a psychic wave of unknown origins.</description>
+		<graphicData>
+			<texPath>Things/Plants/PrismLotus/PrismLotus</texPath>
+		</graphicData>
+		<plant>
+			<harvestedThingDef>ApiPlus_PollenBall_PL</harvestedThingDef>
+			<sowMinSkill>10</sowMinSkill>
+			<growDays>30</growDays>
+			<fertilityMin>2.5</fertilityMin>
+			<fertilitySensitivity>1</fertilitySensitivity>
+			<sowResearchPrerequisites>
+				<li>ApiPlusPrismtech</li>
+			</sowResearchPrerequisites>
+		</plant>
+	</ThingDef>
+	
+	<ThingDef ParentName="ApiniPollenBallBase">
+		<!-- Pollen Ball (PrismLotus) -->
+		<defName>ApiPlus_PollenBall_PL</defName>
+		<label>Pollen Ball (Prism Lotus)</label>
+		<description>A ball of pollen and nectar gathered from the prism lotus. The vital ingredient to make Prism honey.</description>
+		<graphicData>
+			<texPath>Things/Plants/PollenBall/PollenBall_PrismLotus/PollenBall_PrismLotus</texPath>
+		</graphicData>
+		<smeltable>true</smeltable>
+		<smeltProducts>
+			<ApiniNectar>2</ApiniNectar>
+			<ApiPlus_Nectar_PL>5</ApiPlus_Nectar_PL>
+			<ApiniPollen>10</ApiniPollen>
+		</smeltProducts>
+	</ThingDef>
+	
+	<ThingDef ParentName="ApiniNectarBase">
+		<!-- Nectar (PrismLotus) -->
+		<defName>ApiPlus_Nectar_PL</defName>
+		<label>Nectar (Prism Lotus)</label>
+		<description>The sweet fragrant essence of a prism lotus. The vital ingredient to make Prism honey.</description>
+		<graphicData>
+			<texPath>Things/Items/Nectar/Nectar_PL/Nectar_PL</texPath>
+		</graphicData>
+	</ThingDef>
+
+	<ThingDef ParentName="ApiniHoneyBase">
+		<!-- Honey (PrismLotus) -->
+		<defName>ApiPlus_Honey_PL</defName>
+		<label>Honey (Prism Lotus)</label>
+		<description>Light fragments into a myriad colors within this honey. It does not alter the Apini's capabilities when eaten, but its potency in light based technology is unparalleled.
+		\nAlternatively, it'll make for a really nice party decoration.</description>
+		<graphicData>
+			<texPath>Things/Items/Honey/HoneyPrism/HoneyPrism</texPath>
+		</graphicData>
+		<ingestible>
+			<preferability>NeverForNutrition</preferability>
+		</ingestible>
+	</ThingDef>
+</Defs>

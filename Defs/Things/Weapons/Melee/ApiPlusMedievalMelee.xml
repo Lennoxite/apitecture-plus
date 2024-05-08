@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>ApiPlus_HoneyCrystalSabre</defName>
+    <label>honey crystal sabre</label>
+    <description>A sabre made of shiny wax, edged with solidified honey crystal. The honey edge fractures during an attack, leaving behind abrasive, sticky honey crystals in the victim's wounds. This causes mild pain, and reduces manipulation.</description>
+    <graphicData>
+      <texPath>Things/Weapons/Melee/ApiPlus_HoneyCrystalSabre</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.1</uiIconScale>
+    <techLevel>Medieval</techLevel>
+    <weaponTags>
+      <li>MedievalMeleeAdvanced</li>
+    </weaponTags>
+    <statBases>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>2</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <costList>
+	  <ApiPlus_ShinyWax>100</ApiPlus_ShinyWax>
+      <ApiniHoney>20</ApiniHoney>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>LongBlades</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <tools>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>HoneyCrystalCut</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>2.7</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+    <defName>ApiPlus_HoneyMountedHammer</defName>
+    <label>honey mounted hammer</label>
+    <description>A long polearm topped with a brutal hammer. The head is covered with mostly solidified honey, which covers victims with honey with each swing. 
+	\nThe head splatters honey onto hit victims, applying a honey effect which slows down movement, and even manipulation at higher levels.</description>
+    <techLevel>Medieval</techLevel>
+    <costList>
+	  <ApiPlus_ShinyWax>150</ApiPlus_ShinyWax>
+      <ApiniHoney>30</ApiniHoney>
+    </costList>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>5</Mass>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>LongBlades</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <weaponTags>
+      <li>MedievalMeleeDecent</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>HoneyBash</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+      <li>
+        <label>head</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+        <capacities>
+          <li>HoneyBash</li>
+        </capacities>
+        <power>17</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <graphicData>
+      <texPath>Things/Weapons/Melee/ApiPlus_HoneyMountedHammer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+    <defName>ApiPlus_FrostHoneyMallet</defName>
+    <label>frost honey mallet</label>
+    <description>A hammer head perched on a long stick. Very unwieldy and deals very little damage, but provides an additional layer of defense in return.
+	\nOn hit, releases a miniature smoke cloud of rapidly vanishing cold honey mist. Like a smokepop belt, this makes it harder for pawns within the mist to get shot by ranged attacks, but not as much as the smokepop belt. The mist also does not obscure turret AI.</description>
+    <techLevel>Medieval</techLevel>
+    <costList>
+	  <ApiPlus_ShinyWax>150</ApiPlus_ShinyWax>
+      <ApiniHoney_F>30</ApiniHoney_F>
+    </costList>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>5</Mass>
+    </statBases>
+    <recipeMaker>
+    <researchPrerequisites>
+      <li>ApiPlusThermalTempering</li>
+      <li>LongBlades</li>
+    </researchPrerequisites>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <weaponTags>
+      <li>MedievalMeleeDecent</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>4</cooldownTime>
+      </li>
+      <li>
+        <label>head</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>4</cooldownTime>
+      </li>
+    </tools>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <graphicData>
+      <texPath>Things/Weapons/Melee/ApiPlus_FrostHoneyMallet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<comps>
+	<li Class="ApitecturePlus.ApiPlus_CompProperties_FrostBurster">
+	<f_mistSize>2</f_mistSize>
+	</li>
+	</comps>
+  </ThingDef>
+
+</Defs>

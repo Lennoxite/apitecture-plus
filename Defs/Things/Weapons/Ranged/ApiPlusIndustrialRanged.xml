@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+<!-- Honey Six-Shooter -->
+
+ <ThingDef ParentName="BaseBullet">
+    <defName>ApiPlus_Bullet_HoneySixShooter</defName>
+    <label>honey pea shot</label>
+    <graphicData>
+      <texPath>Things/Weapons/Ranged/Projectiles/ApiPlus_HoneyGlobSmall</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(0.6, 0.6)</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>HoneyGlob</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <stoppingPower>0.8</stoppingPower>
+      <speed>45</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>ApiPlus_HoneySixShooter</defName>
+    <label>honey six shooter</label>
+    <description>A honey pistol based off an ancient revolver model. It's weaker than a revolver but inflicts a honey effect.
+	\nThe bullet splatters honey onto hit victims, applying a honey effect which slows down movement, and even manipulation at higher levels.</description>
+    <graphicData>
+      <texPath>Things/Weapons/Ranged/ApiPlus_HoneySixShooter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(1, 1)</drawSize>
+    </graphicData>
+    <uiIconScale>1.4</uiIconScale>
+    <soundInteract>Interact_Revolver</soundInteract>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <WorkToMake>4000</WorkToMake>
+      <Mass>1.4</Mass>
+      <AccuracyTouch>0.85</AccuracyTouch>
+      <AccuracyShort>0.77</AccuracyShort>
+      <AccuracyMedium>0.43</AccuracyMedium>
+      <AccuracyLong>0.30</AccuracyLong>
+      <RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>SimpleGun</li>
+      <li>Revolver</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>RangedLight</li>
+    </weaponClasses>
+    <costList>
+      <ApiPlus_ShinyWax>30</ApiPlus_ShinyWax>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ApiPlus_Bullet_HoneySixShooter</defaultProjectile>
+        <warmupTime>0.3</warmupTime>
+        <range>23</range>
+        <soundCast>Shot_Revolver</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+
+<!-- ====================== Pollen Dust Grenade ====================== -->
+  <ThingDef ParentName="BaseMakeableGrenade">
+    <defName>ApiPlus_PollenGrenade</defName>
+    <label>pollen grenades</label>
+    <description>A set of dense lumps of pollen. If thrown, these "grenades" burst into a cloud of irritating pollen, dealing very little damage but blinding everyone in range for a time.
+	\nIf this somehow kills someone it would be an extremely shocking turn of events.</description>
+    <recipeMaker>
+      <researchPrerequisite>Machining</researchPrerequisite>
+    </recipeMaker>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Weapons/Ranged/ApiPlus_PollenGrenades</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.3</uiIconScale>
+    <soundInteract>Interact_Grenade</soundInteract>
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <Mass>1</Mass>
+      <RangedWeapon_Cooldown>2.66</RangedWeapon_Cooldown>
+      <WorkToMake>12000</WorkToMake>
+    </statBases>
+    <costList>
+      <ApiniNectar>20</ApiniNectar>
+      <ApiniPollen>80</ApiniPollen>
+    </costList>
+    <weaponTags>
+      <li>GrenadeDestructive</li>
+    </weaponTags>
+    <thingCategories>
+      <li>Grenades</li>
+    </thingCategories>
+    <verbs>
+      <li>
+        <label>throw pollen grenade</label>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>6</range>
+        <forcedMissRadius>1.9</forcedMissRadius>
+        <warmupTime>1.5</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+        <soundCast>ThrowGrenade</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <defaultProjectile>Proj_GrenadePollen</defaultProjectile>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef Name="BasePollenGrenadeProjectile" ParentName="BaseGrenadeProjectile" Abstract="True">
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Weapons/Ranged/Projectiles/ApiPlus_PollenGrenade</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius>1.9</explosionRadius >
+      <damageDef>PollenBurst</damageDef>
+      <!-- Use default damage from explosion def -->
+      <explosionDelay>0</explosionDelay>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BasePollenGrenadeProjectile">
+    <defName>Proj_GrenadePollen</defName>
+    <label>pollen grenade</label>
+  </ThingDef>
+  
+</Defs>

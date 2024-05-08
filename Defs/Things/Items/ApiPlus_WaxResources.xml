@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="StoneBlocksBase">
+    <defName>ApiPlus_HardyWax</defName>
+    <label>hardy wax</label>
+    <description>Rough blocks of refined hardy wax, made from rough pollen and regular beeswax. Used for stony objects and special apitecture projects.
+	\nTragically, does not completely resist fire like actual stone.</description>
+    <graphicData>
+      <texPath>Things/Resources/HardyWax</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(160,190,230)</color>
+    </graphicData>
+    <statBases>
+      <Mass>1</Mass>
+      <SharpDamageMultiplier>0.4</SharpDamageMultiplier>
+    </statBases>
+    <costList>
+      <ApiniPollenBall_M>20</ApiniPollenBall_M>
+      <ApiniWax>100</ApiniWax>
+    </costList>
+    <stuffProps>
+      <color>(160,190,230)</color>
+      <soundImpactStuff>BulletImpact_Ground</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <stuffAdjective>hardy wax</stuffAdjective>
+      <statFactors>
+        <Beauty>1.1</Beauty>  
+        <MaxHitPoints>1.4</MaxHitPoints>
+        <WorkToBuild>5.0</WorkToBuild>
+        <WorkToMake>1.1</WorkToMake>
+		<Flammability>0.1</Flammability>
+      </statFactors>
+      <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+    </stuffProps>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+	  <workAmount>625</workAmount>
+	  <productCount>60</productCount>
+	  <researchPrerequisite>WaxRefinement</researchPrerequisite>
+    </recipeMaker>
+
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>ApiPlus_ShinyWax</defName>
+    <label>shiny wax</label>
+    <description>Glittering sheets of metallic wax, made from hot and rough pollen mixed with regular beeswax. Used for metallic objects and apitech machinery.</description>
+    <graphicData>
+      <texPath>Things/Resources/ShinyWax</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <statBases>
+      <MarketValue>1.9</MarketValue>
+      <Mass>0.5</Mass>
+      <StuffPower_Armor_Sharp>0.8</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.40</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.55</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1</BluntDamageMultiplier>
+    </statBases>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <smeltable>true</smeltable>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <appearance>Metal</appearance>
+      <commonality>0.10</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <color>(194,203,204)</color>
+      <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <stuffAdjective>shiny wax</stuffAdjective>
+      <statFactors>
+        <MaxHitPoints>1</MaxHitPoints>
+        <Beauty>1</Beauty>
+        <Flammability>0.6</Flammability>
+      </statFactors>
+      <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+    </stuffProps>
+    <costList>
+      <ApiniPollenBall_M>20</ApiniPollenBall_M>
+      <ApiniPollenBall_E>20</ApiniPollenBall_E>
+      <ApiniWax>100</ApiniWax>
+    </costList>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+	  <productCount>50</productCount>
+	  <workAmount>1875</workAmount>
+	  <researchPrerequisite>WaxRefinement</researchPrerequisite>
+    </recipeMaker>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <allowedArchonexusCount>80</allowedArchonexusCount>
+ 
+
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+	<name>Apitecture Plus!</name>
+	<author>Lennoxicon</author>
+	<!--<url>https://gitgud.io/Ed86/rjw</url>-->
+	<supportedVersions>
+		<li>1.3</li>
+	</supportedVersions>
+	<packageId>apitec.plus</packageId>
+	<modDependencies>
+		<li>
+			<packageId>sera.apinialienrace</packageId>
+			<displayName>Apini Playable Race, Continued!</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2204437968</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>sera.apinialienrace</li>
+	</loadAfter>
+
+	<description>
+Fanmade content add-on for the Apini race, featuring new weapons, buildings, and other assorted things! WIP, more content coming soon!
+
+\n\nCredit for the creation of Apini goes to Sera/Miss Bones, and to Jack7D1 and the community for continuing the mod for us to enjoy!
+	</description>
+</ModMetaData>

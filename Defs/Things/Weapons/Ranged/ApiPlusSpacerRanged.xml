@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>ApiPlus_Gun_PrismLance</defName>
+    <label>prism lance</label>
+    <description>An Apini prismtech laser rifle. An intense beam of light is focused and modulated by numerous sheets of angled prism honey crystal foci, and released as a multicolor deathray.
+	\nPrism lasers can bounce between pawns if they're covered in refracting prism honey. As a result, you need a way to inflict prism honey coating to many pawns at once to reveal this weapon's true power.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Things/Weapons/Ranged/ApiPlus_PrismLance</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_ChargeLance</soundInteract>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <Mass>8</Mass>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.80</AccuracyShort>
+      <AccuracyMedium>0.80</AccuracyMedium>
+      <AccuracyLong>0.70</AccuracyLong>
+      <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+      <WorkToMake>60000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>ApiPlusPrismtech</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+	  <ApiPlus_ShinyWax>120</ApiPlus_ShinyWax>
+      <ApiPlus_Honey_PL>40</ApiPlus_Honey_PL>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <weaponTags>
+      <li>SpacerGun</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ApiPlus_Bullet_PrismLance</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>29.9</range>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>ApiPlus_Bullet_PrismLance</defName>
+    <label>prism lance shot</label>
+    <graphicData>
+      <texPath>Things/Weapons/Ranged/Projectiles/ApiPlus_PrismLanceShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>1.5</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Prism</damageDef>
+      <damageAmountBase>24</damageAmountBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>120</speed>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>ApiPlus_Gun_PrismaticBlobLauncher</defName>
+    <label>prismatic blob launcher</label>
+    <description>A gigantic tube meant to deliver shells of prismatic honey at far ranges. Hard to aim and does little damage, but can get lots of people covered in prism honey at once.
+	\nBest used as a companion to other prismtech weapons to make use of the prism honey's prismatic refraction ability.</description>
+    <graphicData>
+      <texPath>Things/Weapons/Ranged/ApiPlus_PrismBlobLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <generateCommonality>0.3</generateCommonality>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <statBases>
+      <WorkToMake>20000</WorkToMake>
+      <Mass>3.4</Mass>
+      <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>ApiPlusPrismtech</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+	  <ApiPlus_ShinyWax>70</ApiPlus_ShinyWax>
+      <ApiPlus_Honey_PL>80</ApiPlus_Honey_PL>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ApiPlus_Bullet_PrismBlob</defaultProjectile>
+        <warmupTime>3.5</warmupTime>
+        <range>27</range>
+        <forcedMissRadius>2.5</forcedMissRadius>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_IncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>ApiPlus_Bullet_PrismBlob</defName>
+    <label>prismatic blob</label>
+    <graphicData>
+      <texPath>Things/Weapons/Ranged/Projectiles/ApiPlus_PrismHoneyGlob</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <color>(254,189,58)</color>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <speed>60</speed>
+      <damageDef>PrismHoneySplash</damageDef>
+      <!-- Use default damage from explosion def -->
+      <explosionRadius>4</explosionRadius>
+      <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+      <preExplosionSpawnChance>0.6</preExplosionSpawnChance>
+      <arcHeightFactor>0.2</arcHeightFactor>
+      <shadowSize>0.6</shadowSize>
+    </projectile>
+  </ThingDef>
+  
+  
+  </Defs>

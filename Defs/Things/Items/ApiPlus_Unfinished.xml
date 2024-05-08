@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	<!--Used for items without stuff. -->
+ <!-- <ThingDef ParentName="UnfinishedBase">
+    <defName>ApiPlus_NonStuffableUnfinishedWeapon</defName>
+    <label>unfinished weapon</label>
+    <description>An unfinished weapon.</description>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedWeapon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+  </ThingDef> -->
+
+</Defs>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>TrapHoneyPit</defName>
+    <description>A small hole filled with a shallow layer of honey below a steep drop, covered in nearby debris and dirt. If someone isn't paying attention, they'll be sent falling down a few meters, and the honey isn't quite deep enough to cushion their fall, so they'll swiftly injure themselves kissing a hard floor while getting honey all over them.
+	\nThe bottom of the pit splashes honey onto victims, applying a honey effect which slows down movement, and even manipulation at higher levels. While this trap is weaker than a spike trap, it can signficantly slow down invaders.</description>
+    <label>honey pit trap</label>
+    <thingClass>ApitecturePlus.ApiPlus_Building_TrapHoneyPit</thingClass>
+    <graphicData>
+      <texPath>Things/Buildings/Security/TrapHoneyPit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <rect>(0,0,1,0.15)</rect>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <stealable>false</stealable>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <statBases>
+      <Mass>2.5</Mass>
+      <MaxHitPoints>40</MaxHitPoints>
+      <WorkToBuild>3200</WorkToBuild>
+      <Flammability>1</Flammability>
+      <Beauty>-18</Beauty>
+      <Cleanliness>-5</Cleanliness>
+      <TrapMeleeDamage>50</TrapMeleeDamage>
+      <TrapSpringChance>1.0</TrapSpringChance>
+    </statBases>
+    <costList>
+      <ApiniHoney>30</ApiniHoney>
+    </costList>
+    <designationCategory>Security</designationCategory>
+    <designationHotKey>Misc6</designationHotKey>
+    <building>
+      <isTrap>true</isTrap>
+      <trapDestroyOnSpring>true</trapDestroyOnSpring>
+      <trapDamageCategory>Sharp</trapDamageCategory>
+      <expandHomeArea>false</expandHomeArea>
+      <ai_chillDestination>false</ai_chillDestination>
+    </building>
+    <constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+    <placeWorkers>
+      <li>PlaceWorker_NeverAdjacentTrap</li>
+    </placeWorkers>
+  </ThingDef>
+
+</Defs>

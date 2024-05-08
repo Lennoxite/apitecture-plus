@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+<SoundDef>
+  
+    <defName>ApiPlus_Interact_SolenopsisGauntlets</defName>  
+    <context>MapOnly</context> 
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>ApiPlus/SolenopsisGauntlets</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>60~65</volumeRange>      
+        <pitchRange>0.9152174~1.169566</pitchRange>
+      </li>
+    </subSounds>
+ </SoundDef>
+ 
+ <SoundDef>
+  
+    <defName>ApiPlus_MeleeHit_SolenopsisGauntlets</defName>  
+    <context>MapOnly</context> 
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>ApiPlus/SolenopsisGauntletsHit</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>60~65</volumeRange>      
+        <pitchRange>0.9152174~1.169566</pitchRange>
+      </li>
+    </subSounds>
+ </SoundDef>
+ 
+ </Defs>

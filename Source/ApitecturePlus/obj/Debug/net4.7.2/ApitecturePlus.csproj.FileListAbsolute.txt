@@ -1,0 +1,10 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\apitecture-plus\Source\ApitecturePlus\obj\Debug\net4.7.2\ApitecturePlus.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\apitecture-plus\Source\ApitecturePlus\obj\Debug\net4.7.2\ApitecturePlus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\apitecture-plus\Source\ApitecturePlus\obj\Debug\net4.7.2\ApitecturePlus.AssemblyInfoInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\apitecture-plus\Source\ApitecturePlus\obj\Debug\net4.7.2\ApitecturePlus.AssemblyInfo.cs
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\apitecture-plus\Source\ApitecturePlus\obj\Debug\net4.7.2\ApitecturePlus.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\apitecture-plus\Assemblies\Debug\net4.7.2\ApitecturePlus.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\apitecture-plus\Assemblies\Debug\net4.7.2\ApitecturePlus.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\apitecture-plus\Source\ApitecturePlus\obj\Debug\net4.7.2\ApitecturePlus.csproj.CopyComplete
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\apitecture-plus\Source\ApitecturePlus\obj\Debug\net4.7.2\ApitecturePlus.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\apitecture-plus\Source\ApitecturePlus\obj\Debug\net4.7.2\ApitecturePlus.pdb

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ResearchProjectDef>
+		<defName>WaxRefinement</defName>
+		<label>Wax Refinement</label>
+		<description>Base wax is wood-like in quality. As nice as it is for hives, it's not gonna hold up well in the long term. Enables the production of hardy wax, a stony wax, and shiny wax, a metallic wax, using specific pollen types and regular beeswax.</description>
+		<baseCost>750</baseCost>
+		<techLevel>Medieval</techLevel>
+		<prerequisites>
+			<li>ApiniHoneyConditioning</li>
+		</prerequisites>
+		<tab>Apiculture</tab>
+		<researchViewX>2</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>ApiPlusPrismtech</defName>
+		<label>Prismtech</label>
+		<description>It is said that a hive once reached space age technology, and was inspired into creating a brand new plant to control light itself. Allows the cultivation of the Prism Lotus, and enables the production of Prismtech.</description>
+		<baseCost>2000</baseCost>
+		<prerequisites>
+			<li>ApiniPlantKnowledgeMind</li>
+			<li>ApiniPlantKnowledgeBody</li>
+			<li>Fabrication</li>
+		</prerequisites>
+		<tab>Apiculture</tab>
+		<techLevel>Spacer</techLevel>
+		<researchViewX>4</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>ApiPlusThermalTempering</defName>
+		<label>Thermal Tempering</label>
+		<description>With emberose and frostbell, a whole new world of thermal possibilities opens up. Enables the production of heat and cold based weapons and security.</description>
+		<baseCost>1000</baseCost>
+		<prerequisites>
+			<li>ApiniPlantKnowledgeAdvanced</li>
+		</prerequisites>
+		<tab>Apiculture</tab>
+		<techLevel>Medieval</techLevel>
+		<researchViewX>3</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
+</Defs>

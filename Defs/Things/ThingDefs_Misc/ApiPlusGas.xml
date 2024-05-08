@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <ThingDef ParentName="BaseGas">
+    <defName>ApiPlus_Gas_FrostHoneyMist</defName>
+    <label>honey mist</label>
+    <graphicData>
+      <texPath>Things/Gas/Puff</texPath>
+      <drawSize>2.2</drawSize>
+      <color>(0.2,0.9,1.0,0.5)</color>
+    </graphicData>
+    <gas>
+      <expireSeconds>4</expireSeconds>
+      <blockTurretTracking>false</blockTurretTracking>
+      <accuracyPenalty>0.4</accuracyPenalty>
+      <rotationSpeed>10</rotationSpeed>
+    </gas>
+  </ThingDef>
+    
+</Defs>

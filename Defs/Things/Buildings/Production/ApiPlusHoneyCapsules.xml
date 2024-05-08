@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="ApiniVatBase">
+		<!-- Honey Vat (Prism Lotus) -->
+		<defName>ApiPlus_Vat_PL</defName>
+		<label>Honey Capsule (Prism Lotus)</label>
+		<description>A hexagonal container for creating honey from nectar.</description>
+		<thingClass>Apini.Building_FermentingVat</thingClass>
+		<modExtensions>
+			<li Class="Apini.VatProperties">
+				<inputThingDef>ApiPlus_Nectar_PL</inputThingDef>
+				<outputThingDef>ApiPlus_Honey_PL</outputThingDef>
+				<maxCapacity>200</maxCapacity>
+				<fermentationModifier>3</fermentationModifier>
+				<!-- 1:4 ratio -->
+				<inputToOutputRatio>4</inputToOutputRatio>
+				<!-- Translations, point to custom translation lines. -->
+				<containsInputTranslation>ContainsNectar</containsInputTranslation>
+				<containsOutputTranslation>ContainsHoney</containsOutputTranslation>
+				<fermentedTranslation>FermentedHoney</fermentedTranslation>
+				<fermentationProgressTranslation>HoneyFermentationProgress</fermentationProgressTranslation>
+				<fermentationNonIdealTranslation>HoneyFermentationBarrelOutOfIdealTemperature</fermentationNonIdealTranslation>
+			</li>
+		</modExtensions>
+		<graphicData>
+			<texPath>Things/Buildings/Production/HoneyCapsulePrism/HoneyCapsulePrism</texPath>
+		</graphicData>
+	</ThingDef>
+	
+	<WorkGiverDef>
+		<!-- Fill Vat (PrismLotus) -->
+		<defName>ApiPlus_FillVat_PL</defName>
+		<modExtensions>
+			<li Class="Apini.WorkgiverFermentingVatProperties">
+				<inputThingDef>ApiPlus_Vat_PL</inputThingDef>
+				<jobDef>ApiniFillFermentingVat</jobDef>
+			</li>
+		</modExtensions>
+		<label>fill fermenting vats</label>
+		<giverClass>Apini.WorkGiver_FillFermentingVat</giverClass>
+		<workType>ApiniHoneyMaker</workType>
+		<verb>fill</verb>
+		<gerund>filling</gerund>
+		<priorityInType>5</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>	
+
+		<WorkGiverDef>
+		<!-- Empty Vat (PrismLotus) -->
+		<defName>ApiPlus_EmptyVat_PL</defName>
+		<modExtensions>
+			<li Class="Apini.WorkgiverFermentingVatProperties">
+				<outputThingDef>ApiPlus_Vat_PL</outputThingDef>
+				<jobDef>ApiniTakeThingOutOfFermentingVat</jobDef>
+			</li>
+		</modExtensions>
+		<label>take honey out of fermenting vat</label>
+		<giverClass>Apini.WorkGiver_TakeThingOutOfFermenter</giverClass>
+		<workType>ApiniHoneyMaker</workType>
+		<verb>take honey</verb>
+		<gerund>taking honey from</gerund>
+		<priorityInType>20</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+</Defs>

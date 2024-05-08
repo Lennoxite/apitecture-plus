@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+  <!-- <EffecterDef>
+    <defName>HoneyCoated</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerContinuous</subEffecterClass>
+        <fleckDef>Smoke</fleckDef>
+        <ticksBetweenMotes>30</ticksBetweenMotes>
+        <scale>0.6~1.1</scale>
+        <spawnLocType>OnSource</spawnLocType>
+        <absoluteAngle>true</absoluteAngle>
+        <angle>30~70</angle>
+        <speed>0.2~0.35</speed>
+		<color>(0.92, 0.66, 0.22)</color>
+      </li>
+    </children>
+  </EffecterDef>-->
+</Defs>

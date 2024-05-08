@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+    <defName>ApiPlus_PrismDipper</defName>
+    <label>prism dipper</label>
+    <description>A more advanced honey dipper. Its head glitters with prism honey. This somehow makes it stronger and more versatile than a normal honey dipper.
+	\nThe head smears prismatic honey onto hit victims, applying a honey effect which slightly slows down movement. However, the light refracting properties of prism honey causes prismatic lasers to "bounce" off, dealing full damage to the pawn and makes the laser bounce to another pawn nearby at 60% power. 
+	\nThis effect can repeat if the new target pawn is covered in prism honey.</description>
+    <graphicData>
+      <texPath>Things/Weapons/Melee/ApitecPlus_PrismDipper</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconScale>1.1</uiIconScale>
+    <techLevel>Spacer</techLevel>
+    <weaponTags>
+      <li>SpacerMeleeBasic</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>MeleeBlunt</li>
+    </weaponClasses>
+    <costStuffCount>40</costStuffCount>
+    <statBases>
+      <WorkToMake>1200</WorkToMake>
+      <Mass>2</Mass>
+    </statBases>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costList>
+      <ApiPlus_Honey_PL>10</ApiPlus_Honey_PL>
+    </costList>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+		<researchPrerequisite>ApiPlusPrismtech</researchPrerequisite>
+    </recipeMaker>
+    <tools>
+	
+	
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>PrismHoneyBash</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1.75</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  </Defs>

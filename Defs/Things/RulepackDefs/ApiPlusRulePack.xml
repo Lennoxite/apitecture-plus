@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RulePackDef>
+    <defName>DamageEvent_TrapHoneyPit</defName>
+    <include>
+      <li>DamageEvent_Include</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>damage_source->[honeypit] caught</li>
+        <li>damage_source->[honeypit] ensnared</li>
+        <li>damage_source->[honeypit] tricked</li>
+
+        <li>honeypit(p=3)->a hexagonal hole</li>
+        <li>honeypit(p=3)->a honey pit</li>
+        <li>honeypit->a sweet smelling pit</li>
+        <li>honeypit->a deep hole</li>
+        <li>honeypit->a hidden hole</li>
+
+        <li>damaged_present->battering</li>
+        <li>damaged_present->smashing</li>
+        <li>damaged_present->hammering</li>
+        <li>damaged_present->bruising</li>
+
+        <li>destroyed_present->tearing apart</li>
+        <li>destroyed_present->totally crushing</li>
+        <li>destroyed_present->completely decimating</li>
+        <li>destroyed_present->exploding</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>Damage_PollenBurst</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>damaged_past(p=2)->billowed past</li>
+        <li>damaged_past(p=2)->caressed</li>
+        <li>damaged_past->powdered</li>
+        
+        <li>destroyed_past->somehow broke</li>
+        <li>destroyed_past->mysteriously erased</li>
+        <li>destroyed_past->suffocated</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+   <RulePackDef>
+    <defName>Damage_PrismHoneySplash</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>damaged_past(p=2)->thwacked</li>
+        <li>damaged_past(p=2)->bumped</li>
+        <li>damaged_past->bashed</li>
+        
+        <li>destroyed_past->drowned</li>
+        <li>destroyed_past->completely ripped</li>
+        <li>destroyed_past->suffocated</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>

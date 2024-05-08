@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <DamageDef ParentName="BluntBase">
+    <defName>HoneyBash</defName>
+    <label>honey bash</label>
+    <additionalHediffs>
+      <li>
+        <hediff>HoneyCoat</hediff>
+        <severityPerDamageDealt>0.015</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+  </DamageDef>
+  
+   <DamageDef ParentName="BluntBase">
+    <defName>BurningHoneyBash</defName>
+    <label>burning honey bash</label>
+    <additionalHediffs>
+      <li>
+        <hediff>BurningHoneyCoat</hediff>
+        <severityPerDamageDealt>0.01</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+  </DamageDef>
+
+  <DamageDef ParentName="BluntBase">
+    <defName>PrismHoneyBash</defName>
+    <label>prismatic honey bash</label>
+    <additionalHediffs>
+      <li>
+        <hediff>PrismHoneyCoat</hediff>
+        <severityPerDamageDealt>0.015</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+  </DamageDef>
+
+  <DamageDef ParentName="CutBase">
+    <defName>HoneyCrystalCut</defName>
+    <label>honey crystal cut</label>
+    <additionalHediffs>
+      <li>
+        <hediff>HoneyCrystalGrinding</hediff>
+        <severityPerDamageDealt>0.015</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+  </DamageDef>
+</Defs>

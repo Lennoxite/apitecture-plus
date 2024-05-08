@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--User may not have Royalty-->
+   <ThingDef Abstract="True" Name="ApiPlus_MeleeWeaponUltratech" ParentName="BaseWeapon">
+    <techLevel>Ultra</techLevel>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+      <Mass>2</Mass>
+    </statBases>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponMelee</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+      <li Class="CompProperties_Biocodable"/>
+    </comps>
+    <smeltable>true</smeltable>
+    <burnableByRecipe>true</burnableByRecipe>
+    <thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>
+    <weaponTags>
+      <li MayRequire="Royalty">UltratechMelee</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Melee</li>
+      <li>Ultratech</li>
+    </weaponClasses>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+  </ThingDef>
+ 
+  <ThingDef ParentName="ApiPlus_MeleeWeaponUltratech">
+    <defName>ApiPlus_SolenopsisGauntlets</defName>
+    <label>solenopsis gauntlets</label>
+    <description>A pair of thruster powered gauntlets. An internal tank is filled with hyperdense crystallized honey from the emberose plant. When used to punch something, an electric spark ignites the emberose honey crystals to generate thrust.
+	\nThe blast amplifies the user's punching force, strong enough to puncture steel. The ignited honey crystals melt back into burning liquid emberose honey, which splashes onto victims.
+	\nThe splash smears honey onto hit victims, applying a burning honey effect which slows down movement, and even manipulation at higher levels, and inflicts constant burn damage. The burning coating fades away fast.</description>
+    <soundInteract>ApiPlus_Interact_SolenopsisGauntlets</soundInteract>
+    <meleeHitSound>ApiPlus_MeleeHit_SolenopsisGauntlets</meleeHitSound>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <relicChance>3</relicChance>
+    <weaponClasses>
+      <li>MeleeBlunt</li>
+    </weaponClasses>
+    <graphicData>
+      <texPath>Things/Weapons/Melee/ApitecPlus_SolenopsisGauntlets</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tools>
+      <li>
+        <label>fist</label>
+        <capacities>
+          <li>BurningHoneyBash</li>
+        </capacities>
+        <power>21</power>
+        <cooldownTime>3</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  </Defs>
